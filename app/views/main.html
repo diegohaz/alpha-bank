@@ -8,6 +8,7 @@
 </nav>
 
 <div class="panel">
+
   <div class="toolbar">
     <div class="title">
       <span class="glyphicon glyphicon-leaf"></span>
@@ -23,5 +24,46 @@
     </a>
     <a class="glyphicon glyphicon-cog" ng-href="#/"></a>
   </div>
-  <div class="banner"></div>
+
+  <div class="banner">
+    <div class="text">
+      <p>New</p>
+      <h2>Web Banking</h2>
+      <a ng-href="#/">Take the tour <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+    </div>
+  </div>
+
+  <div class="section blue-section">
+    <div class="light">
+      <div class="header">Table 1</div>
+      <div class="table-wrapper" ng-controller="Table1Ctrl">
+        <table>
+          <tbody>
+            <tr ng-repeat="item in items">
+              <td>
+                <div>Label</div>
+                <div>{{item.id}}</div>
+              </td>
+              <td>
+                <div class="head-value">Label</div>
+                <div class="value">{{item.price1 | currency}}</div>
+              </td>
+              <td>
+                <div class="head-value">Label</div>
+                <div class="value">{{item.price2 | currency}}</div>
+              </td>
+              <td>
+                <a ng-href="#/" class="glyphicon glyphicon-menu-hamburger"></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dark">
+
+    </div>
+  </div>
+
 </div>

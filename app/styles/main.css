@@ -15,7 +15,7 @@ html, body {
   min-height: 100%;
   border: none;
   box-shadow: -4px 0 8px rgba(0,0,0,.37);
-  background-image: radial-gradient(circle closest-corner at 50% 200px, #bcd5e8, #174c83);
+  background-image: radial-gradient(ellipse 50% 100vw at 40% 40%, #bcd5e8, #20578f);
 }
 
 .toolbar {
@@ -91,6 +91,69 @@ html, body {
   box-shadow: 0 -2px 4px rgba(0,0,0,.37);
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  font-size: 18px;
+}
+
+.banner .text {
+  margin: 32px 0 0 -50%;
+}
+
+.banner p {
+  margin: 0;
+  align-self: flex-start;
+  text-transform: uppercase;
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.banner a {
+  display: flex;
+  padding: 4px 8px;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 50%;
+  white-space: nowrap;
+  margin-top: 16px;
+}
+
+.banner a .glyphicon {
+  margin-left: 4px;
+}
+
+.section {
+  display: flex;
+  max-height: 400px;
+}
+
+.section > * {
+  flex: 1;
+}
+
+.blue-section {
+  background-image: linear-gradient(145deg, #476d91, #183452);
+}
+
+.light {
+  background-image: linear-gradient(145deg, #719ec0, #4d7da1);
+  display: flex;
+  flex-direction: column;
+}
+
+.table-wrapper {
+  overflow-y: auto;
+  margin: 2px;
+  flex: 1;
+}
+
 .sidebar {
   width: 100px;
   height: 100%;
@@ -131,4 +194,43 @@ html, body {
 .sidebar a span.label {
   font-weight: 400;
   text-transform: uppercase;
+}
+
+table {
+  margin: 12px;
+  width: calc(100% - 24px);
+  overflow-y: auto;
+  color: #fff;
+}
+
+table .head-value {
+  opacity: .5;
+}
+
+table .value {
+  font-weight: 500;
+}
+
+table a {
+  color: #fff;
+}
+
+table td {
+  border: none !important;
+  padding: 16px !important;
+}
+
+table tr {
+  background-color: rgba(0,0,0,.1);
+}
+
+table tr:nth-child(odd) {
+  background-color: rgba(255,255,255,.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+    max-height: 800px;
+  }
 }
