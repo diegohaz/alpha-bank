@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: Table1Ctrl', function () {
+describe('Controller: Table2Ctrl', function () {
 
   // load the controller's module
   beforeEach(module('alphaBankApp'));
 
-  var Table1Ctrl,
+  var Table2Ctrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    Table1Ctrl = $controller('Table1Ctrl', {
+    Table2Ctrl = $controller('Table2Ctrl', {
       $scope: scope
       // place here mocked dependencies
     });

@@ -68,7 +68,41 @@
     </div>
 
     <div class="dark">
-
+      <div class="table-wrapper" ng-controller="Table2Ctrl">
+        <table>
+          <thead>
+            <tr>
+              <td>{{title}}</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in items">
+              <td>
+                <img src="{{item.image}}" width="70">
+              </td>
+              <td>
+                <div>{{item.title}}</div>
+                <div>{{item.id}}</div>
+              </td>
+              <td>
+                <div class="head-value">Label</div>
+                <div class="value">{{item.price1 | currency}}</div>
+              </td>
+              <td>
+                <div class="head-value">Label</div>
+                <div class="value">{{item.price2 | currency}}</div>
+              </td>
+              <td>
+                <a ng-href="#/" class="glyphicon glyphicon-menu-hamburger"></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="points" ng-repeat="point in points">
+          <div class="points-label">{{point.label}}</div>
+          <div class="points-value">{{point.value | number}}</div>
+        </div>
+      </div>
     </div>
   </div>
 
