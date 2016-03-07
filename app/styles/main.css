@@ -20,6 +20,68 @@ html, body {
 
 .toolbar {
   height: 77px;
+  display: flex;
+  padding: 0 24px 0 0;
+  align-items: center;
+  color: #fff;
+}
+
+.toolbar > * {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar .glyphicon {
+  font-size: 24px;
+}
+
+.toolbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.toolbar > a {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.toolbar > a:hover {
+  background-color: rgba(0,0,0,.37);
+}
+
+.title {
+  flex: 1;
+  color: rgba(0,0,0,.75);
+}
+
+.title h1 {
+  font-size: 18px;
+  margin: 0 0 0 8px;
+}
+
+.title a {
+  color: rgba(0,0,0,.75);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.toolbar .user .glyphicon {
+  margin-left: 8px;
+}
+
+.toolbar .comment {
+  position: relative;
+}
+
+.toolbar .comment .badge {
+  position: absolute;
+  background-color: #f00;
+  font-size: 11px;
+  font-weight: 400;
+  top: -4px;
+  right: -4px;
+  padding: 4px;
 }
 
 .banner {

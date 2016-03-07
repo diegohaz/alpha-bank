@@ -1,4 +1,4 @@
-<nav class="sidebar" ng-controller="SidebarCtrl">
+<nav class="sidebar hidden-xs" ng-controller="SidebarCtrl">
   <li ng-repeat="link in links">
     <a ng-href="#/" ng-class="{active: link.active}">
       <span ng-class="'glyphicon ' + link.icon"></span>
@@ -8,6 +8,20 @@
 </nav>
 
 <div class="panel">
-  <div class="toolbar"></div>
+  <div class="toolbar">
+    <div class="title">
+      <span class="glyphicon glyphicon-leaf"></span>
+      <h1><a ng-href="#/">Alpha Bank</a></h1>
+    </div>
+    <a class="user" ng-href="#/">
+      Diego Haz
+      <span class="glyphicon glyphicon-user"></span>
+    </a>
+    <a class="comment" ng-href="#/">
+      <span class="glyphicon glyphicon-comment"></span>
+      <span class="badge">12</span>
+    </a>
+    <a class="glyphicon glyphicon-cog" ng-href="#/"></a>
+  </div>
   <div class="banner"></div>
 </div>
