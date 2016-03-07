@@ -1,0 +1,13 @@
+<nav class="sidebar" ng-controller="SidebarCtrl">
+  <li ng-repeat="link in links">
+    <a ng-href="#/" ng-class="{active: link.active}">
+      <span ng-class="'glyphicon ' + link.icon"></span>
+      <span class="label">{{link.label}}</span>
+    </a>
+  </li>
+</nav>
+
+<div class="panel">
+  <div class="toolbar"></div>
+  <div class="banner"></div>
+</div>
