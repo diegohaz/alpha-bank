@@ -9,6 +9,8 @@
  */
 angular.module('alphaBankApp')
   .controller('Table1Ctrl', function($scope) {
+    $scope.title = 'Table 1';
+    $scope.price = 43241.4356;
     $scope.items = [
       {id: 'GR4102313210381093', price1: 10232.22, price2: 15333.6421},
       {id: 'GR4102313210381093', price1: 10132.22, price2: 11333.6421},

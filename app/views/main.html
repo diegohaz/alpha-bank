@@ -35,9 +35,15 @@
 
   <div class="section blue-section">
     <div class="light">
-      <div class="header">Table 1</div>
       <div class="table-wrapper" ng-controller="Table1Ctrl">
         <table>
+          <thead>
+            <tr>
+              <td>{{title}}</td>
+              <td></td>
+              <td>{{price | currency}}</td>
+            </tr>
+          </thead>
           <tbody>
             <tr ng-repeat="item in items">
               <td>

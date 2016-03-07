@@ -1,0 +1,41 @@
+.sidebar {
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  list-style: none;
+}
+
+.sidebar a {
+  color: rgba(255,255,255,.75);
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+  border-width: 0 0 1px 0;
+  border-image: linear-gradient(to left, transparent, rgba(255,255,255,.1), transparent) 100% 1;
+}
+
+.sidebar li:last-child a {
+  border-image: none;
+}
+
+.sidebar a:hover,
+.sidebar a:active,
+.sidebar a.active {
+  background-color: rgba(0, 0, 0, .37);
+  color: #fff;
+}
+
+.sidebar a span {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.sidebar a span.glyphicon {
+  font-size: 20px;
+}
+
+.sidebar a span.label {
+  font-weight: 400;
+  text-transform: uppercase;
+}

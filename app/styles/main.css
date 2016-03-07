@@ -1,3 +1,6 @@
+@import 'sidebar.css';
+@import 'toolbar.css';
+
 html, body {
   background-color: #363636;
   height: 100%;
@@ -16,72 +19,6 @@ html, body {
   border: none;
   box-shadow: -4px 0 8px rgba(0,0,0,.37);
   background-image: radial-gradient(ellipse 50% 100vw at 40% 40%, #bcd5e8, #20578f);
-}
-
-.toolbar {
-  height: 77px;
-  display: flex;
-  padding: 0 24px 0 0;
-  align-items: center;
-  color: #fff;
-}
-
-.toolbar > * {
-  margin-left: 24px;
-  display: flex;
-  align-items: center;
-}
-
-.toolbar .glyphicon {
-  font-size: 24px;
-}
-
-.toolbar a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.toolbar > a {
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.toolbar > a:hover {
-  background-color: rgba(0,0,0,.37);
-}
-
-.title {
-  flex: 1;
-  color: rgba(0,0,0,.75);
-}
-
-.title h1 {
-  font-size: 18px;
-  margin: 0 0 0 8px;
-}
-
-.title a {
-  color: rgba(0,0,0,.75);
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.toolbar .user .glyphicon {
-  margin-left: 8px;
-}
-
-.toolbar .comment {
-  position: relative;
-}
-
-.toolbar .comment .badge {
-  position: absolute;
-  background-color: #f00;
-  font-size: 11px;
-  font-weight: 400;
-  top: -4px;
-  right: -4px;
-  padding: 4px;
 }
 
 .banner {
@@ -149,58 +86,35 @@ html, body {
 }
 
 .table-wrapper {
-  overflow-y: auto;
-  margin: 2px;
-  flex: 1;
-}
-
-.sidebar {
-  width: 100px;
-  height: 100%;
-  text-align: center;
-  list-style: none;
-}
-
-.sidebar a {
-  color: rgba(255,255,255,.75);
-  display: block;
-  text-decoration: none;
-  padding: 8px;
-  border-width: 0 0 1px 0;
-  border-image: linear-gradient(to left, transparent, rgba(255,255,255,.1), transparent) 100% 1;
-}
-
-.sidebar li:last-child a {
-  border-image: none;
-}
-
-.sidebar a:hover,
-.sidebar a:active,
-.sidebar a.active {
-  background-color: rgba(0, 0, 0, .37);
-  color: #fff;
-}
-
-.sidebar a span {
-  display: block;
-  width: 100%;
-  margin: 8px 0;
-}
-
-.sidebar a span.glyphicon {
-  font-size: 20px;
-}
-
-.sidebar a span.label {
-  font-weight: 400;
-  text-transform: uppercase;
+  height: 400px;
 }
 
 table {
-  margin: 12px;
-  width: calc(100% - 24px);
-  overflow-y: auto;
+  width: 100%;
   color: #fff;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+table thead {
+  flex: 0 0 auto;
+  width: calc(100% - 0.9em);
+  display: table;
+  table-layout: fixed;
+}
+
+table tbody {
+  padding: 0 12px;
+  flex: 1 1 auto;
+  display: block;
+  overflow-y: auto;
+}
+
+table tbody tr {
+  width: 100%;
+  display: table;
 }
 
 table .head-value {
@@ -213,6 +127,7 @@ table .value {
 
 table a {
   color: #fff;
+  text-decoration: none !important;
 }
 
 table td {
@@ -226,6 +141,11 @@ table tr {
 
 table tr:nth-child(odd) {
   background-color: rgba(255,255,255,.1);
+}
+
+table thead tr {
+  background-color: transparent !important;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1024px) {
