@@ -20,7 +20,7 @@ html, body {
 
 .banner {
   height: 420px;
-  background: url('../images/banner.jpg') 100% 0 no-repeat;
+  background: url('images/banner.jpg') 100% 0 no-repeat;
   background-size: cover;
   box-shadow: 0 -2px 4px rgba(0,0,0,.37);
 }
