@@ -4,119 +4,33 @@
   <meta charset="utf-8">
   <title>Alpha Bank</title>
 
+  <base href="/"></base>
+
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="app.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="app/assets/css/main.css">
 </head>
-<body ng-app="alphaBankApp">
+<body ng-app="app">
 
-  <div class="main" ng-controller="MainCtrl">
+  <ab-app></ab-app>
 
-    <nav class="sidebar hidden-xs">
-      <li ng-repeat="link in nav">
-        <a href="#" ng-class="{active: link.active}">
-          <span ng-class="'glyphicon ' + link.icon"></span>
-          <span class="label">{{link.label}}</span>
-        </a>
-      </li>
-    </nav>
-
-
-  <div class="panel">
-
-    <div class="toolbar">
-      <div class="title">
-        <span class="glyphicon glyphicon-leaf"></span>
-        <h1><a ng-href="#/">Alpha Bank</a></h1>
-      </div>
-      <a class="user" ng-href="#/">
-        Diego Haz
-        <span class="glyphicon glyphicon-user"></span>
-      </a>
-      <a class="comment" ng-href="#/">
-        <span class="glyphicon glyphicon-comment"></span>
-        <span class="badge">12</span>
-      </a>
-      <a class="glyphicon glyphicon-cog" ng-href="#/"></a>
-    </div>
-
-    <div class="banner">
-      <div class="text">
-        <p>New</p>
-        <h2>Web Banking</h2>
-        <a ng-href="#/">Take the tour <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
-      </div>
-    </div>
-
-    <div class="section blue-section">
-      <div class="light">
-        <div class="table-wrapper" ng-controller="ExchangesCtrl">
-          <table>
-            <thead>
-              <tr>
-                <td>{{title}}</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="rate in rates">
-                <td>{{rate.name}}</td>
-                <td>
-                  <div class="head-value">Buy</div>
-                  <div class="value">{{rate.currBuy | currency}}</div>
-                </td>
-                <td>
-                  <div class="head-value">Sell</div>
-                  <div class="value">{{rate.currSell | currency}}</div>
-                </td>
-                <td>
-                  <a ng-href="#/" class="glyphicon glyphicon-menu-hamburger"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="dark">
-        <div class="table-wrapper" ng-controller="AccountsCtrl">
-          <table>
-            <thead>
-              <tr>
-                <td>{{title}}</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="account in accounts">
-                <td>
-                  <div>Bank: {{account.accBankCode}}</div>
-                  <div>Account: {{account.accNumber}}</div>
-                </td>
-                <td>
-                  <div class="head-value">Balance</div>
-                  <div class="value">{{account.balance | currency}}</div>
-                </td>
-                <td>
-                  <div class="head-value">Date</div>
-                  <div class="value">{{account.actualizationDate | date}}</div>
-                </td>
-                <td>
-                  <a ng-href="#/" class="glyphicon glyphicon-menu-hamburger"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="points" ng-repeat="point in points">
-            <div class="points-label">{{point.label}}</div>
-            <div class="points-value">{{point.value | number}}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/@angular/router/angular1/angular_1_router.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/modules/finance/index.js"></script>
+  <script src="app/modules/dashboard/index.js"></script>
+  <script src="app/modules/dashboard/dashboard.component.js"></script>
+  <script src="app/modules/page2/index.js"></script>
+  <script src="app/modules/page2/page2.component.js"></script>
+  <script src="app/modules/finance/finance.service.js"></script>
+  <script src="app/modules/exchanges/index.js"></script>
+  <script src="app/modules/exchanges/exchange-list.component.js"></script>
+  <script src="app/modules/accounts/index.js"></script>
+  <script src="app/modules/accounts/account-list.component.js"></script>
+  <script src="app/modules/layout/index.js"></script>
+  <script src="app/modules/layout/sidebar.component.js"></script>
+  <script src="app/modules/layout/banner.component.js"></script>
+  <script src="app/modules/layout/toolbar.component.js"></script>
 </body>
 </html>

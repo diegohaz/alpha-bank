@@ -1,0 +1,25 @@
+{
+  "name": "alpha-bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "^1.5.2",
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegohaz/alpha-bank.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegohaz/alpha-bank/issues"
+  },
+  "homepage": "https://github.com/diegohaz/alpha-bank#readme"
+}

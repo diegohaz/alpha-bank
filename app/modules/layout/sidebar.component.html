@@ -1,0 +1,8 @@
+<nav>
+  <li ng-repeat="link in $ctrl.nav">
+    <a ng-link="[link.name]" ng-class="{active: link.active}">
+      <span ng-class="'glyphicon ' + link.icon"></span>
+      <span class="label">{{link.label}}</span>
+    </a>
+  </li>
+</nav>
