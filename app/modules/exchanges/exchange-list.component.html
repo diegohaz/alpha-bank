@@ -1,25 +1,25 @@
 <div class="table-wrapper">
-<table>
-  <thead>
-    <tr>
-      <td>{{$ctrl.title}}</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="rate in $ctrl.rates">
-      <td>{{rate.name}}</td>
-      <td>
-        <div class="head-value">Buy</div>
-        <div class="value">{{rate.currBuy | currency}}</div>
-      </td>
-      <td>
-        <div class="head-value">Sell</div>
-        <div class="value">{{rate.currSell | currency}}</div>
-      </td>
-      <td>
-        <a ng-href="#/" class="glyphicon glyphicon-menu-hamburger"></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <td>Exchange Rates</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="rate in $ctrl.rates">
+        <td>{{rate.name}}</td>
+        <td>
+          <div class="head-value">Buy</div>
+          <div class="value">{{rate.currBuy | currency}}</div>
+        </td>
+        <td>
+          <div class="head-value">Sell</div>
+          <div class="value">{{rate.currSell | currency}}</div>
+        </td>
+        <td>
+          <a ng-href="#/" class="glyphicon glyphicon-menu-hamburger"></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

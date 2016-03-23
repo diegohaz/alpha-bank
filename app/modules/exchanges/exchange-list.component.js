@@ -12,14 +12,8 @@ ExchangeListController.$inject = ['financeService'];
 function ExchangeListController(financeService) {
   var $ctrl = this;
 
-  this.title = 'Exchange Rates';
-
-  getExchangeRates();
-
-  function getExchangeRates() {
-    return financeService.getExchangeRates().then(function(res) {
-      $ctrl.rates = res.data;
-    });
-  }
+  financeService.getExchangeRates().then(function(res) {
+    $ctrl.rates = res.data;
+  });
 }
 })();

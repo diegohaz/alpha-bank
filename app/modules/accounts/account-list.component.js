@@ -12,18 +12,13 @@ AccountListController.$inject = ['financeService'];
 function AccountListController(financeService) {
   var $ctrl = this;
 
-  this.title = 'Transparent Accounts';
   this.points = [
     {label: 'Membership Reward Points', value: 13000},
     {label: 'Bonus Points', value: 36000}
   ];
 
-  getAccounts();
-
-  function getAccounts() {
-    return financeService.getAccounts().then(function(res) {
-      $ctrl.accounts = res.data;
-    });
-  }
+  financeService.getAccounts().then(function(res) {
+    $ctrl.accounts = res.data;
+  });
 }
 })();
