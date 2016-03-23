@@ -1,3 +1,4 @@
 angular.module('app.page2', [
-  'app.layout'
+  'app.layout',
+  'app.form'
 ]);

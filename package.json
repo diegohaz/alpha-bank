@@ -6,6 +6,7 @@
   "dependencies": {
     "@angular/router": "^0.2.0",
     "angular": "^1.5.2",
+    "angular-messages": "^1.5.2",
     "bootstrap": "^3.3.6"
   },
   "devDependencies": {},
