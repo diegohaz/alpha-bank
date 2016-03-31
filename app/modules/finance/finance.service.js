@@ -1,26 +1,26 @@
-(function() {
-'use strict';
+define(function(require) {
+  'use strict';
 
-angular.module('app.finance')
-  .factory('financeService', financeService);
-
-financeService.$inject = ['$http'];
-
-function financeService($http) {
-  var base = 'https://api.csas.cz/sandbox/webapi/api/v1/';
-  var headers = {'WEB-API-key': '77cdfc33-e36d-4ae7-bd1a-e2aa3ade979c'};
-
-  return {
-    getAccounts: getAccounts,
-    getExchangeRates: getExchangeRates
-  };
-
-  function getAccounts() {
-    return $http.get(base + 'transparentAccounts/accounts', {headers: headers});
+  return function(module) {
+    module.factory('financeService', financeService);
   }
 
-  function getExchangeRates() {
-    return $http.get(base + 'exchangerates', {headers: headers});
+  financeService.$inject = ['$http', 'baseUrl', 'key'];
+
+  function financeService($http, baseUrl, key) {
+    var headers = {'WEB-API-key': key};
+
+    return {
+      getAccounts: getAccounts,
+      getExchangeRates: getExchangeRates
+    };
+
+    function getAccounts() {
+      return $http.get(baseUrl + 'transparentAccounts/accounts', {headers: headers});
+    }
+
+    function getExchangeRates() {
+      return $http.get(baseUrl + 'exchangerates', {headers: headers});
+    }
   }
-}
-})();
+});

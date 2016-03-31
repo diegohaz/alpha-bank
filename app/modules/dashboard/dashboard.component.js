@@ -1,13 +1,14 @@
-(function() {
-'use strict';
+define(function(require) {
+  'use strict';
 
-angular.module('app.dashboard')
-  .component('abDashboard', {
-    templateUrl: 'app/modules/dashboard/dashboard.component.html',
-    controller: DashboardController
-  });
+  return function(module) {
+    module.component('abDashboard', {
+      templateUrl: 'app/modules/dashboard/dashboard.component.html',
+      controller: DashboardController
+    });
+  }
 
-function DashboardController() {
+  function DashboardController() {
 
-}
-})();
+  }
+});

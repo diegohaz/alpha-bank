@@ -1,13 +1,14 @@
-(function() {
-'use strict';
+define(function(require) {
+  'use strict';
 
-angular.module('app.layout')
-  .component('abBanner', {
-    templateUrl: 'app/modules/layout/banner.component.html',
-    controller: BannerController
-  });
+  return function(module) {
+    module.component('abBanner', {
+      templateUrl: 'app/modules/layout/banner.component.html',
+      controller: BannerController
+    });
+  }
 
-function BannerController() {
+  function BannerController() {
 
-}
-})();
+  }
+});

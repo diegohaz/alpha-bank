@@ -1,13 +1,14 @@
-(function() {
-'use strict';
+define(function(require) {
+  'use strict';
 
-angular.module('app.layout')
-  .component('abToolbar', {
-    templateUrl: 'app/modules/layout/toolbar.component.html',
-    controller: ToolbarController
-  });
+  return function(module) {
+    module.component('abToolbar', {
+      templateUrl: 'app/modules/layout/toolbar.component.html',
+      controller: ToolbarController
+    });
+  }
 
-function ToolbarController() {
+  function ToolbarController() {
 
-}
-})();
+  }
+});

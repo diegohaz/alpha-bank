@@ -1,19 +1,20 @@
-(function() {
-'use strict';
+define(function(require) {
+  'use strict';
 
-angular.module('app.exchanges')
-  .component('abExchangeList', {
-    templateUrl: 'app/modules/exchanges/exchange-list.component.html',
-    controller: ExchangeListController
-  });
+  return function(module) {
+    module.component('abExchangeList', {
+      templateUrl: 'app/modules/exchanges/exchange-list.component.html',
+      controller: ExchangeListController
+    });
+  }
 
-ExchangeListController.$inject = ['financeService'];
+  ExchangeListController.$inject = ['financeService'];
 
-function ExchangeListController(financeService) {
-  var $ctrl = this;
+  function ExchangeListController(financeService) {
+    var $ctrl = this;
 
-  financeService.getExchangeRates().then(function(res) {
-    $ctrl.rates = res.data;
-  });
-}
-})();
+    financeService.getExchangeRates().then(function(res) {
+      $ctrl.rates = res.data;
+    });
+  }
+});

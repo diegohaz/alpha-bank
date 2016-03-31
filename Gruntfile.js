@@ -7,5 +7,19 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-  })
+    requirejs: {
+      js: {
+        options: {
+          uglify2: {
+              mangle: false
+          },
+          baseUrl: "app/",
+          mainConfigFile: "app/main.js",
+          name: 'main',
+          out: "app/modules/modules.combined.js",
+          optimize: 'uglify2'
+        }
+      }
+    }
+  });
 };

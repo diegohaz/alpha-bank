@@ -9,29 +9,17 @@
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="app/assets/css/main.css">
 </head>
-<body ng-app="app">
+<body>
 
   <ab-app></ab-app>
 
-  <script src="node_modules/angular/angular.min.js"></script>
-  <script src="node_modules/angular-messages/angular-messages.min.js"></script>
-  <script src="node_modules/@angular/router/angular1/angular_1_router.js"></script>
-  <script src="app/app.js"></script>
-  <script src="app/modules/finance/index.js"></script>
-  <script src="app/modules/dashboard/index.js"></script>
-  <script src="app/modules/dashboard/dashboard.component.js"></script>
-  <script src="app/modules/page2/index.js"></script>
-  <script src="app/modules/page2/page2.component.js"></script>
-  <script src="app/modules/finance/finance.service.js"></script>
-  <script src="app/modules/exchanges/index.js"></script>
-  <script src="app/modules/exchanges/exchange-list.component.js"></script>
-  <script src="app/modules/accounts/index.js"></script>
-  <script src="app/modules/accounts/account-list.component.js"></script>
-  <script src="app/modules/form/index.js"></script>
-  <script src="app/modules/form/simple-form.component.js"></script>
-  <script src="app/modules/layout/index.js"></script>
-  <script src="app/modules/layout/sidebar.component.js"></script>
-  <script src="app/modules/layout/banner.component.js"></script>
-  <script src="app/modules/layout/toolbar.component.js"></script>
+  <script src="node_modules/requirejs/require.js"></script>
+  <script>
+    require(['app/main'], function() {
+      require(['app'], function() {
+        angular.bootstrap(document, ['app']);
+      });
+    });
+  </script>
 </body>
 </html>
